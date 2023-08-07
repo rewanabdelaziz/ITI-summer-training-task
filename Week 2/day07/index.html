@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day07 task</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="task1">
+        <input type="text" name="name"id="nameinput" placeholder="enter your name">
+        <p id="namevalidation">name must be string and lenght > 4</p>
+        <input  type="number" name="age" id="ageinput" placeholder="enter your age">
+        <p id="agevalidation">age must be > 18</p>
+        <select name="city" id="city">
+            <option value="" checked="">select your city</option>
+            <option value="egtpt">Egypt</option>
+            <option value="france">France</option>
+            <option value="england">England</option>
+        </select>
+        <p id="cityvalidation">city is requred</p>
+        
+        <input type="checkbox" id="football" name="favorite">
+        <label for="football ">football</label>
+        <input type="checkbox" id="basketball" name="favorite">
+        <label for="basketball">basketball</label>
+        <input type="checkbox"id="vollyball" name="favorite">
+        <label for="vollyball">vollyball</label> <br>
+        <p id="favoritevalidation">select two sports at least</p>
+        <button id="btn">submit</button>
+        <button id="reset">reset</button>
+        <p id="formvalid">form is valid</p> 
+        <p id="formNotvalid">form is not valid</p> 
+    </div>
+    <script src="demo.js"></script>
+</body>
+</html>

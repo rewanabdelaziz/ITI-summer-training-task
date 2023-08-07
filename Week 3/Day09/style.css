@@ -1,0 +1,36 @@
+button{
+    display: block;
+    padding: 10px 5px;
+    border: 1px solid rgb(1, 60, 60);
+    background-color: rgb(1, 60, 60);
+    margin: 15px 5px;
+    border-radius: 10px;
+    color: aliceblue;
+}
+select{
+    padding: 10px 5px;
+    border: 1px solid rgb(1, 60, 60);
+    margin: 15px 5px;
+    border-radius: 10px;
+}
+div{
+    display: inline-block;
+    margin: 15px 5px;
+    border: 1px solid rgb(1, 60, 60);
+    border-radius: 10px;
+    padding: 20px;
+}
+/* Add your custom CSS styles here */
+/* body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 50px;
+} */
+img {
+  max-width: 200px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+.hidden {
+    display: none;
+}

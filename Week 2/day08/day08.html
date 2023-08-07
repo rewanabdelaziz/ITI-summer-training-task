@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day08 task</title>
+</head>
+<body>
+    <script>
+        //task 1
+
+        // return odd numbers using filter() and arrow function
+
+        var numArr=[13,15,18,10,12,7,5,30,28,101];
+        console.log(`the array of numbers is : ${numArr}`)
+        let oddNumbers=numArr.filter((num) => num % 2 !=0);
+        console.log(`odd numbers is : ${oddNumbers}`);
+
+        // return even number using foreach() and arrow function
+
+        let evenNumbers= [];
+        numArr.forEach((num) =>{
+        if (num % 2 == 0) {
+           evenNumbers.push(num);
+        }
+        });
+        console.log(`even numbers is : ${evenNumbers}`);
+
+        // square of numbers using map() and arrow function
+
+        let squaredNumbers = numArr.map((number) => number * number);
+        console.log(`squared numbers is : ${squaredNumbers}`);
+
+        // task 2
+
+        // using forEach
+
+        console.log("print numbers in the array using forEach");
+        numArr.forEach((num) => {
+          console.log(num);
+        });
+
+        // using for in 
+
+        console.log("print numbers in the array using for in");
+        for (let i in numArr) {
+           console.log(`${i}: ${numArr[i]}`);
+        }
+
+        // using for of
+        
+        console.log("print numbers in the array using for of");
+        for (let num of numArr) {
+           console.log(num);
+        }
+    </script>
+    
+</body>
+</html>

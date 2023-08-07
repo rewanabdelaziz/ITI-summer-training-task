@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 Day2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="welcomeMessage" class="hidden">
+    <p>Welcome to MY website!</p>
+  </div>
+
+    <img id="userImage" class="hidden" src="https://i.pravatar.cc/100?img=2" alt="User Image" >
+
+
+  <div id="thanksMessage" class="hidden">
+    <p>Thank you for visiting us!</p>
+    <p>after 3 seconds</p>
+  </div>
+
+  <script>
+
+     //--------------------- task 3 ------------------------------
+     
+        function delay(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        function displayWelcomeMessage() {
+            return delay(3000).then(() => {
+                const message=document.getElementById("welcomeMessage");
+                message.classList.remove("hidden");
+            });
+        }
+
+        function displayUserImage() {
+            return delay(3000).then(() => {
+                const img=document.getElementById("userImage");
+                img.classList.remove("hidden");
+                img.style.display = 'block';
+            });
+        }
+
+        function displayThanksMessage() {
+            return delay(3000).then(() => {
+                const thMessage=document.getElementById("thanksMessage");
+                thMessage.classList.remove("hidden");
+            });
+        }
+
+        function redirectToAnotherPage() {
+            window.location.href = "https://www.example.com/another-page";
+        }
+        displayWelcomeMessage()
+            .then(displayUserImage)
+            .then(displayThanksMessage)
+            .then(redirectToAnotherPage)
+            .catch(error => console.error(error));
+    </script>
+</body>
+</html>

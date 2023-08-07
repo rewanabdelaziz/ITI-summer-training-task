@@ -1,0 +1,22 @@
+
+a:hover{ 
+    text-decoration:none;
+}
+p{
+    line-height: 2.5;
+}
+section.col-3 img {
+  height: 40%;
+}
+@media screen and (max-width:768px) {
+  p{
+    line-height: 1.5;
+    font-size: small
+  }
+  h1{
+    font-size:30px;
+  }
+  h2{
+    font-size: 20px;
+  }
+}

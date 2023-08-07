@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 Day2</title>
+</head>
+<body>
+    <script>
+        // --------------------- task 4 ------------------------------
+        // (1) ===> The Proxy object allows to create an object that can be used in place of the original object,
+            //  but which may redefine fundamental Object operations like getting, setting, and defining properties.
+            //  Proxy objects are commonly used to "log property" accesses, validate, and so on.
+            // The Proxy object is a powerful tool for creating advanced behavior for objects.
+
+        // (2)===>creating a Proxy with two parameters:
+        // target: the original object which you want to proxy
+        // handler: an object that defines which operations will be intercepted and how to redefine intercepted operations.
+    
+
+
+            const target = {
+            name:"John",
+            age:30,
+            };
+            
+            const handler = {
+              get: function (target, prop, receiver) {
+                console.log(`Getting property: ${prop}`);
+                return target[prop];
+              },
+              set: function (target, prop, value, receiver) {
+                console.log(`Setting property: ${prop} = ${value}`);
+                target[prop] = value;
+              },
+            };
+            
+            const proxy = new Proxy(target, handler);
+            // get
+            proxy.name;
+            proxy.age; 
+            // set
+            console.log(target.name);
+            proxy.name = "Alice"; 
+            console.log(target.name); 
+             </script>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+.task1{
+    padding: 50px 80px;
+    border:1px solid rgb(4, 104, 104);
+    border-radius: 10px;
+    width: 450px;
+    margin: 100px auto;
+    background-color: white;
+    /* text-align: center; */
+}
+.task1 input{
+        margin-bottom: 30px;
+}
+.task1 input[type='text']{
+    border:1px solid rgb(4, 104, 104);
+    height: 30px;
+    padding: 5px;
+    border-radius:5px;
+    width: 90%;
+    display: block;
+}
+.task1  input[type='number']{
+    border:1px solid rgb(4, 104, 104);
+    height: 30px;
+    padding: 5px;
+    border-radius:5px;
+    width: 90%;
+    display: block;
+}
+.task1 select{
+    display: block;
+    border:1px solid rgb(4, 104, 104);
+    height: 30px;
+    padding: 5px;
+    border-radius:5px;
+    width: 90%;
+    margin-bottom: 30px;
+}
+button,input[type='reset']{
+    display: inline-block;
+    background-color: rgb(4, 104, 104);
+    padding: 10px 40px;
+    color: white;
+    border: 1px solid aqua;
+    border-radius: 10px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+p{
+    color: red;
+    font-size: larger;  
+    display: none;
+}
+#formvalid{
+    color: green;
+}

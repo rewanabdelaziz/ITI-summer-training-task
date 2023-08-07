@@ -1,0 +1,90 @@
+body{
+    background-color: rgb(229, 250, 242);
+}
+/* task 1 */
+.task1{
+    padding: 50px 80px;
+    border:1px solid rgb(4, 104, 104);
+    border-radius: 10px;
+    width: 450px;
+    margin: 100px auto;
+    background-color: white;
+}
+.task1 input{
+        display: block;
+        margin-bottom: 30px;
+}
+.task1 input[type='text']{
+    border:1px solid rgb(4, 104, 104);
+    height: 30px;
+    padding: 5px;
+    border-radius:5px;
+    width: 90%;
+}
+.task1  input[type='number']{
+    border:1px solid rgb(4, 104, 104);
+    height: 30px;
+    padding: 5px;
+    border-radius:5px;
+    width: 90%;
+}
+
+.task1  button{
+     background-color: rgb(4, 104, 104);
+     padding: 10px 40px;
+     color: white;
+     border: 1px solid aqua;
+     border-radius: 10px;
+     margin-top: 40px;
+     margin-left: 150px;
+       
+}
+.task1  button{
+     color: black;
+}
+.namevalidation,.agevalidation{
+  color: red;
+  font-size: larger;  
+}
+.formvalid{
+    justify-content: center;
+    color: green;
+    font-size: 30px;
+}
+/* end task 1 */
+/* task 2 */
+.task2{
+    padding: 50px 80px;
+    border:1px solid rgb(4, 104, 104);
+    border-radius: 10px;
+    width: 550px;
+    margin: 100px auto;
+    background-color: white;
+}
+.task2 input{
+    display: block;
+    margin-bottom: 30px;
+}
+.task2 input[type='text']{
+    border:1px solid rgb(4, 104, 104);
+    height: 30px;
+    padding: 5px;
+    border-radius:5px;
+    width: 90%;
+}
+.task2  button{
+    background-color: rgb(4, 104, 104);
+    text-align: center;
+    padding: 10px 10px;
+    width: 120px;
+    color: white;
+    border: 1px solid aqua;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-left: 10px;
+      
+}
+.task2 .content{
+background-color: rgb(204, 228, 249);
+}
+/* end task 2 */

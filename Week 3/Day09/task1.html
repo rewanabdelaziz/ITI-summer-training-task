@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 Day2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script> 
+     //--------------------- task 1 ------------------------------
+
+     //  1.	Create a function that using fetch and make an Ajax call to this URL (	),
+          //  and after getting the users, display them in a dropdownlist (<select> item)in your page.
+     // a.	Make button besides the list (Show image), and make it disabled.
+     // b.	After the user are retrieved from the server and filled in the drop-down list,
+         //  enable the button, and when clicked, it should display the user details.
+        
+    function getUsers() {
+       const url = "https://jsonplaceholder.typicode.com/users";
+      fetch(url)
+      .then(response => {
+      if (!response.ok) {
+        throw new Error("error.");
+      }
+      return response.json();
+     })
+     .then(data => {
+      const userDropdown = document.createElement('select');
+      const button = document.createElement('button');
+      button.textContent = 'Show image';
+      button.disabled = true;
+      document.body.appendChild(userDropdown);
+      document.body.appendChild(button);
+
+      data.forEach(user => {
+        const optionUser = document.createElement('option');
+        optionUser.value = user.id;
+        optionUser.text = user.name;
+        userDropdown.appendChild(optionUser);
+      });
+
+      userDropdown.disabled = false;
+      button.disabled = false;
+
+      button.addEventListener('click', () => {
+        const userId = userDropdown.value;
+        const user = data.find(user => user.id == userId);
+        const image = document.createElement('img');
+        const userData = document.createElement('div');
+        const img = `https://i.pravatar.cc/100?img=2}`;
+        userData.innerHTML = `
+          <h2>${user.name}</h2>
+          <p>Email: ${user.email}</p>
+          <p>Phone: ${user.phone}</p>
+          <img src="${img}" alt="${user.name}">
+        `;
+        document.body.appendChild(userData);
+      });
+    })
+    .catch(error => {
+      console.error("Error fetching users:", error);
+    });
+}
+
+getUsers();
+
+
+
+
+// using async and await 
+
+  async function fetchUsers() {
+  const url = "https://jsonplaceholder.typicode.com/users";
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error("error.");
+    }
+    const userDropdown = document.createElement('select');
+    const button = document.createElement('button');
+    button.textContent = 'Show image';
+    button.disabled = true;
+    document.body.appendChild(userDropdown);
+    document.body.appendChild(button);
+    const data = await response.json();
+       data.forEach(user => {
+       const optionUser = document.createElement('option');
+       optionUser.value = user.id;
+       optionUser.text = user.name;
+       userDropdown.appendChild(optionUser);
+      });
+    userDropdown.disabled = false;
+    button.disabled = false;
+    button.addEventListener('click', () => {
+        const userId = userDropdown.value;
+        const user = data.find(user => user.id == userId);
+        const image = document.createElement('img');
+        const userData = document.createElement('div');
+        const img=`https://i.pravatar.cc/100?img=2`
+        userData.innerHTML = `
+        <h2>${user.name}</h2>
+        <p>Email: ${user.email}</p>
+        <p>Phone: ${user.phone}</p>
+        <img src="${img}" alt="${user.name}">
+        `;
+        document.body.appendChild(userData);})
+  } catch (error) {
+    console.error("Error fetching users:", error);
+  }
+}
+
+
+fetchUsers();
+
+    </script>
+    
+</body>
+</html>

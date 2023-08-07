@@ -1,0 +1,108 @@
+/* task1 slider */
+body{
+    padding: 0px;
+    margin: 0px;
+}
+.slider{
+    padding: 20px;
+    margin: 30px auto;
+    width:800px;
+    border: 2px solid rgb(0, 0, 0) ;
+    background-color: rgb(228, 241, 248);
+    border-radius: 10px;
+    text-align: center;
+}
+.slider img{
+    width: 100%;
+    height: 400px;
+    margin: auto;
+    display: block;
+}
+.slider button{
+    display: block;
+    padding: 10px 30px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin:30px auto;
+    cursor: pointer;
+}
+/* task2 */
+.task2{
+    padding: 50px 80px;
+    border:1px solid rgb(4, 104, 104);
+    border-radius: 10px;
+    width: 450px;
+    margin: 100px auto;
+    background-color: white;
+    text-align: center;
+}
+.task2 input{
+        display: block;
+        margin-bottom: 30px;
+}
+.task2 input[type='text']{
+    border:1px solid rgb(4, 104, 104);
+    height: 30px;
+    padding: 5px;
+    border-radius:5px;
+    width: 90%;
+}
+.task2  input[type='number']{
+    border:1px solid rgb(4, 104, 104);
+    height: 30px;
+    padding: 5px;
+    border-radius:5px;
+    width: 90%;
+}
+
+button{
+    display: inline-block;
+    background-color: rgb(4, 104, 104);
+    padding: 10px 40px;
+    color: white;
+    border: 1px solid aqua;
+    border-radius: 10px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+.task2  button{
+     color: black;
+}
+table{
+    margin: 50px auto;
+    border:1px solid rgb(4, 104, 104);
+}
+th,td{
+    padding:5px 15px ;
+    border:1px solid rgb(4, 104, 104);
+}
+/* task3 */
+.task3{
+    text-align: center;
+    padding-bottom: 50px;
+}
+.task3 button{
+    margin: 50px auto;
+}
+.task3 p{
+    font-size: 30px;
+    margin: auto;
+}
+.task3 a{
+    font-size: 35px;
+}
+/* window task */
+.win button{
+    display: block;
+    margin: 15px auto;
+}
+/* counter task */
+.counter{
+    text-align: center;
+    padding: 20px;
+    margin: 20px auto;
+    width: 200px;
+    border:1px solid rgb(4, 104, 104);
+    border-radius: 10px;
+}

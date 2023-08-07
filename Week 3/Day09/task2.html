@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 Day2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+         //--------------------- task 2 ------------------------------
+
+
+         const postUrl = 'https://jsonplaceholder.typicode.com/posts';
+         const newPost = {
+          title: 'foo',
+          body: 'bar',
+          userId: 1
+         };
+        
+         fetch(postUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(newPost)
+         })
+          .then(response => response.json())
+          .then(data => {
+            console.log('New post added:', data);
+          })
+          .catch(error => {
+            console.error('Error adding new post:', error);
+          });
+    </script>
+</body>
+</html>

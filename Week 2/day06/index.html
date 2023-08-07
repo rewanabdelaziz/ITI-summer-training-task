@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day06</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- task1 slider -->
+    <div class="slider">
+        <h1> task 1 slider</h1>
+        <img src="img/1.jpg" id="img">
+        <button onclick="nextSlide()">Next</button>
+    </div>
+    <hr>
+    <!-- task2 -->
+    <div class="task2">
+        <input type="text" name="name"id="name" placeholder="enter your name">
+        <input  type="number" name="age" id="age" placeholder="enter your age">
+        <button onclick="addData()">add</button>
+        <table id="data">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </table>
+    </div>
+    <hr>
+    <!-- task 3 -->
+    <div class="task3">
+        <button onclick="downloadLink()">Download</button>
+        <p id="info"></p>
+        <a href="https://github.com/" style="display: none;" id="link">github</a>
+    </div>
+    <hr>
+    <!-- window task-->
+    <div class="win">
+    <button onclick="openNewTab()">Open New Tab</button>
+    <button onclick="closeTab()">Close Tab</button>
+    <button onclick="moveToTab()">Move To Tab</button>
+    <button onclick="MoveByTab()">Move By Tab</button>
+    <button onclick="ResizeToTab()">Resize To Tab</button>
+    <button onclick="ResizeByTab()">Resize By Tab</button>
+    </div>
+    <hr>
+    <!-- counter task -->
+    <div class="counter">
+    <button onclick="startCount()">Start Count</button>
+	<p id="output">0</p>
+	<button onclick="stopCount()">Stop Count</button>
+    </div>
+<script src="demo.js"></script>
+</body>
+</html>
